@@ -19,7 +19,7 @@ describe('ProjectCostEstimator Component', () => {
     const inrButton = screen.getByRole('button', { name: /INR \(₹\) India/i });
     fireEvent.click(inrButton);
 
-    expect(screen.getByText(/₹/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/₹/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Lakhs/i)).toBeInTheDocument();
   });
 

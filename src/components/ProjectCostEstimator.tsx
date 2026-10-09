@@ -10,8 +10,8 @@ export const ProjectCostEstimator: React.FC<ProjectCostEstimatorProps> = ({ onQu
   const [projectType, setProjectType] = useState<'cloud' | 'ai' | 'fullstack' | 'security' | 'mobile'>('cloud');
   const [complexity, setComplexity] = useState<'mvp' | 'growth' | 'enterprise'>('growth');
   const [cloudProvider, setCloudProvider] = useState<'aws' | 'gcp' | 'azure' | 'hybrid'>('aws');
-  const [hasAI, setHasAI] = useState<boolean>(true);
-  const [complianceTier, setComplianceTier] = useState<'standard' | 'soc2' | 'hipaa'>('soc2');
+  const [hasAI, setHasAI] = useState<boolean>(false);
+  const [complianceTier, setComplianceTier] = useState<'standard' | 'soc2' | 'hipaa'>('standard');
   const [speed, setSpeed] = useState<'standard' | 'expedited'>('standard');
 
   // Base pricing calculations
