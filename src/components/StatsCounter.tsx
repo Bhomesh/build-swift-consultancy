@@ -4,31 +4,31 @@ import { Award, Globe2, TrendingDown, Users2 } from 'lucide-react';
 export const StatsCounter: React.FC = () => {
   const stats = [
     {
-      label: 'Enterprise Deployments',
-      value: '150+',
-      description: 'Zero-downtime production rollouts',
+      label: 'Production Uptime SLA',
+      value: '99.99%',
+      description: 'Zero-downtime fault-tolerant architectures',
       icon: Award,
       color: 'text-cyan-400'
     },
     {
-      label: 'Cloud Cost Reductions',
+      label: 'Enterprise Projects',
+      value: '150+',
+      description: 'Production-grade enterprise rollouts',
+      icon: Users2,
+      color: 'text-blue-400'
+    },
+    {
+      label: 'Cloud Cost Reduction',
       value: '45%',
       description: 'Average FinOps infrastructure savings',
       icon: TrendingDown,
       color: 'text-emerald-400'
     },
     {
-      label: 'Global Markets Served',
+      label: 'Countries Served',
       value: '15+',
-      description: 'US, UK, UAE, Singapore & India',
+      description: 'US, UK, EU, UAE, Singapore & India',
       icon: Globe2,
-      color: 'text-blue-400'
-    },
-    {
-      label: 'Senior Engineers in Jaipur',
-      value: '60+',
-      description: 'IIT, BITS Pilani & MNIT alumni',
-      icon: Users2,
       color: 'text-amber-400'
     }
   ];

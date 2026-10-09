@@ -312,15 +312,15 @@ export const ProjectCostEstimator: React.FC<ProjectCostEstimatorProps> = ({ onQu
               <div className="text-3xl sm:text-4xl font-extrabold text-white font-mono tracking-tight flex items-baseline gap-2">
                 {currency === 'USD' ? (
                   <>
-                    <span className="text-cyan-400">${results.minUsd}</span>
+                    <span className="text-cyan-400">{`$${results.minUsd}`}</span>
                     <span className="text-slate-500 text-2xl font-light">–</span>
-                    <span className="text-cyan-400">${results.maxUsd}</span>
+                    <span className="text-cyan-400">{`$${results.maxUsd}`}</span>
                   </>
                 ) : (
                   <>
-                    <span className="text-cyan-400">₹{results.minInr}</span>
+                    <span className="text-cyan-400">{`₹${results.minInr}`}</span>
                     <span className="text-slate-500 text-2xl font-light">–</span>
-                    <span className="text-cyan-400">₹{results.maxInr} Lakhs</span>
+                    <span className="text-cyan-400">{`₹${results.maxInr} Lakhs`}</span>
                   </>
                 )}
               </div>

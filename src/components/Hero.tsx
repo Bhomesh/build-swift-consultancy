@@ -26,18 +26,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]">
-            Architecting{' '}
+            Engineering Next-Gen{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">
-              Enterprise Cloud & AI
+              Cloud, AI & Enterprise Software
             </span>{' '}
-            at Startup Velocity.
+            at Startup Speed
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Build Swift is a premier IT consultancy headquartered in Jaipur, Rajasthan. We engineer 
-            resilient microservices, production AI agent swarms, Kubernetes cloud migrations, and 
-            bulletproof cybersecurity for ambitious global enterprises.
+            Build Swift is Jaipur’s premier global IT consultancy, transforming ideas into scalable 
+            digital powerhouses. From our state-of-the-art Innovation Lab in Jaipur, Rajasthan, we architect 
+            high-throughput microservices, sovereign AI agent systems, and automated multi-cloud infrastructures.
           </p>
 
           {/* Quick value props */}
@@ -52,26 +52,33 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
             </div>
             <div className="flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Jaipur SEZ Innovation Lab</span>
+              <span>World Trade Park Innovation Lab</span>
             </div>
           </div>
 
           {/* Action CTAs */}
           <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#cost-estimator"
+              href="#services"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5"
             >
-              <Calculator className="w-5 h-5 text-cyan-200" />
-              <span>Instant Project Cost Calculator</span>
+              <span>Explore Capabilities</span>
               <ArrowRight className="w-4 h-4" />
+            </a>
+
+            <a
+              href="#cost-estimator"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-base border border-slate-700/80 hover:border-cyan-500/50 transition-all"
+            >
+              <Calculator className="w-5 h-5 text-cyan-400" />
+              <span>Instant Project Estimate</span>
             </a>
 
             <button
               onClick={onOpenConsultation}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-base border border-slate-700/80 hover:border-cyan-500/50 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-cyan-950/40 hover:bg-cyan-900/50 text-cyan-300 font-semibold text-base border border-cyan-500/40 hover:border-cyan-400 transition-all"
             >
-              <span>Schedule Free Tech Audit</span>
+              <span>Book Free Consultation</span>
             </button>
           </div>
 

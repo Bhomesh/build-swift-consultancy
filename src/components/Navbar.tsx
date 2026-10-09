@@ -19,10 +19,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
 
   const navLinks = [
     { label: 'Services', href: '#services' },
+    { label: 'Technologies', href: '#tech-stack' },
     { label: 'Cost Estimator', href: '#cost-estimator' },
-    { label: 'Tech Stack', href: '#tech-stack' },
     { label: 'Case Studies', href: '#case-studies' },
-    { label: 'Jaipur Hub', href: '#jaipur-hub' },
+    { label: 'Jaipur Campus', href: '#jaipur-hub' },
+    { label: 'Testimonials', href: '#testimonials' },
     { label: 'FAQs', href: '#faqs' },
   ];
 
@@ -95,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
               onClick={onOpenConsultation}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5"
             >
-              <span>Book Consultation</span>
+              <span>Book Free Consultation</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
