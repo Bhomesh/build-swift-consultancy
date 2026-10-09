@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { servicesData } from '../data/servicesData';
 import { Cloud, Cpu, Code2, ShieldCheck, Smartphone, RefreshCw, CheckCircle2, ArrowRight } from 'lucide-react';
 import { ServiceItem } from '../types';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BentoGrid } from './ui/BentoGrid';
+import { BentoGridItem } from './ui/BentoGridItem';
 
 interface ServicesSectionProps {
   onSelectService: (serviceName: string) => void;
@@ -80,26 +82,19 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         </div>
 
         {/* Aceternity Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredServices.map((service: ServiceItem, index: number) => {
+        <BentoGrid className="md:auto-rows-auto">
+          {filteredServices.map((service: ServiceItem) => {
             const isExpanded = expandedService === service.id;
 
             return (
-              <motion.div
+              <BentoGridItem
                 key={service.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative rounded-2xl p-6 sm:p-7 bg-zinc-950/80 border border-white/10 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between hover:shadow-2xl hover:shadow-cyan-500/5"
+                className="h-full flex flex-col justify-between"
               >
-                {/* Subtle top edge gradient line on hover */}
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
                 <div className="space-y-4">
                   {/* Icon & Category Tag */}
                   <div className="flex items-center justify-between">
-                    <div className="p-2.5 rounded-xl bg-zinc-900 border border-white/10 group-hover:border-cyan-500/30 transition">
+                    <div className="p-2.5 rounded-xl bg-zinc-900 border border-white/10 group-hover/bento:border-cyan-500/30 transition">
                       {getIcon(service.icon)}
                     </div>
                     <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-zinc-900 text-cyan-300 border border-white/10">
@@ -109,7 +104,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
                   {/* Title & Short description */}
                   <div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-lg font-bold text-white group-hover/bento:text-cyan-300 transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed font-light">
@@ -122,12 +117,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                     <span className="text-[10px] uppercase font-mono tracking-wider text-zinc-500 block">
                       Key Deliverables
                     </span>
-                    {service.deliverables.slice(0, isExpanded ? 4 : 3).map((item, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-zinc-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 shrink-0" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                    <AnimatePresence>
+                      {service.deliverables.slice(0, isExpanded ? 4 : 3).map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="flex items-start gap-2 text-xs text-zinc-300"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 mt-0.5 shrink-0" />
+                          <span>{item}</span>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
                   </div>
 
                   {/* Tech stack badges */}
@@ -154,18 +157,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
 
                   <button
                     onClick={() => onSelectService(service.title)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 group-hover:translate-x-1 transition-all"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 group-hover/bento:translate-x-1 transition-all"
                   >
                     <span>Request Quote</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
-              </motion.div>
+              </BentoGridItem>
             );
           })}
-        </div>
+        </BentoGrid>
 
       </div>
     </section>
   );
 };
+
+export default ServicesSection;

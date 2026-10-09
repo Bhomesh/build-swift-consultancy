@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-800/80 text-slate-400 text-xs">
+    <footer className="bg-black border-t border-white/5 text-zinc-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -16,24 +16,24 @@ export const Footer: React.FC = () => {
           {/* Brand & Jaipur Registration info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-mono font-bold text-white text-base shadow-md shadow-cyan-500/20">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/15 flex items-center justify-center font-mono font-bold text-white text-base shadow-lg">
+                <Zap className="w-4 h-4 text-cyan-400" />
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight">
                 Build<span className="text-cyan-400">Swift</span>
               </span>
             </div>
 
-            <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">
+            <p className="text-zinc-400 leading-relaxed text-xs sm:text-sm font-light">
               Build Swift is an enterprise IT consultancy and software engineering powerhouse registered in Jaipur, Rajasthan. 
               We design and ship high-throughput distributed systems, autonomous AI agents, and resilient cloud architectures.
             </p>
 
-            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-[11px] font-mono space-y-1 text-slate-400">
+            <div className="p-3.5 rounded-xl bg-zinc-950 border border-white/10 text-[11px] font-mono space-y-1 text-zinc-400">
               <div className="text-cyan-400 font-semibold">{jaipurHubData.companyName}</div>
-              <div>CIN: <span className="text-slate-300">{jaipurHubData.corporateRegistration.cin}</span></div>
-              <div>GSTIN: <span className="text-slate-300">{jaipurHubData.corporateRegistration.gstin}</span> (Jaipur, Rajasthan)</div>
-              <div>DPIIT Startup India ID: <span className="text-slate-300">{jaipurHubData.corporateRegistration.dpiitRecognition}</span></div>
+              <div>CIN: <span className="text-zinc-300">{jaipurHubData.corporateRegistration.cin}</span></div>
+              <div>GSTIN: <span className="text-zinc-300">{jaipurHubData.corporateRegistration.gstin}</span> (Jaipur, Rajasthan)</div>
+              <div>DPIIT Startup India ID: <span className="text-zinc-300">{jaipurHubData.corporateRegistration.dpiitRecognition}</span></div>
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
             <h5 className="text-xs font-mono uppercase tracking-wider text-white font-bold">
               Jaipur Headquarters
             </h5>
-            <div className="space-y-2.5 text-xs text-slate-300">
+            <div className="space-y-2.5 text-xs text-zinc-300">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span>Suite 804, Tower B, World Trade Park, Malviya Nagar, Jaipur, Rajasthan 302017</span>
@@ -95,28 +95,28 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-slate-400 text-xs">
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-zinc-400 text-xs">
             <span>© {new Date().getFullYear()} BuildSwift Technologies Private Limited. All Rights Reserved.</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 text-xs">
-            <span className="flex items-center gap-1 text-slate-300">
+            <span className="flex items-center gap-1 text-zinc-300">
               <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" /> ISO 27001
             </span>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-300">SOC 2 Type II</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-300">AWS Certified Partner</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-300">Microsoft Solutions Partner</span>
-            <span className="text-slate-600">•</span>
-            <span className="flex items-center gap-1 text-slate-400">
+            <span className="text-zinc-600">•</span>
+            <span className="text-zinc-300">SOC 2 Type II</span>
+            <span className="text-zinc-600">•</span>
+            <span className="text-zinc-300">AWS Certified Partner</span>
+            <span className="text-zinc-600">•</span>
+            <span className="text-zinc-300">Microsoft Solutions Partner</span>
+            <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1 text-zinc-400">
               Crafted in Jaipur, India <Heart className="w-3 h-3 text-red-500 fill-red-500" />
             </span>
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition ml-2"
+              className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white transition ml-2 border border-white/5"
               title="Back to top"
             >
               <ArrowUp className="w-4 h-4" />
@@ -128,3 +128,5 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+export default Footer;

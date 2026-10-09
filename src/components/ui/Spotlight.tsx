@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'framer-motion';
 
 type SpotlightProps = {
@@ -10,17 +10,20 @@ export const Spotlight: React.FC<SpotlightProps> = ({
   className = '',
   fill = 'white',
 }) => {
+  const reactId = useId();
+  const filterId = `spotlight-filter-${reactId.replace(/:/g, '')}`;
+
   return (
     <motion.svg
       initial={{ opacity: 0, transform: 'translateY(-20px)' }}
       animate={{ opacity: 1, transform: 'translateY(0px)' }}
       transition={{ duration: 1.2, ease: 'easeOut' }}
-      className={`animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0 ${className}`}
+      className={`pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
       fill="none"
     >
-      <g filter="url(#filter)">
+      <g filter={`url(#${filterId})`}>
         <ellipse
           cx="1924.71"
           cy="273.501"
@@ -33,7 +36,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
       </g>
       <defs>
         <filter
-          id="filter"
+          id={filterId}
           x="0.860352"
           y="0.838989"
           width="3785.16"
@@ -57,3 +60,5 @@ export const Spotlight: React.FC<SpotlightProps> = ({
     </motion.svg>
   );
 };
+
+export default Spotlight;

@@ -4,6 +4,7 @@ import { ArrowRight, Calculator, CheckCircle2, Shield, Sparkles, Building2, Term
 import { Spotlight } from './ui/Spotlight';
 import { BackgroundGrid } from './ui/BackgroundGrid';
 import { Button as MovingBorderButton } from './ui/MovingBorder';
+import { HoverBorderGradient } from './ui/HoverBorderGradient';
 
 interface HeroProps {
   onOpenConsultation: () => void;
@@ -19,26 +20,32 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
       />
       <Spotlight
         className="top-20 right-0 md:right-40"
-        fill="rgba(37, 99, 235, 0.35)"
+        fill="rgba(255, 255, 255, 0.2)"
       />
 
       {/* Aceternity Dot Background with Radial Gradient Mask */}
-      <BackgroundGrid className="py-8">
+      <BackgroundGrid className="py-8" pattern="dots">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             
-            {/* Minimalist Pill Badge with animation */}
+            {/* Minimalist Pill Badge with Aceternity Hover Border */}
             <motion.div
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900/90 border border-white/10 text-xs sm:text-sm font-medium text-cyan-300 shadow-xl backdrop-blur-md"
+              className="inline-flex items-center justify-center"
             >
-              <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-              <Building2 className="w-3.5 h-3.5 text-amber-400" />
-              <span>Jaipur, Rajasthan Registered IT Consultancy & Engineering Firm</span>
-              <span className="text-zinc-600 hidden sm:inline">|</span>
-              <span className="text-zinc-400 hidden sm:inline">Global Delivery Pods</span>
+              <HoverBorderGradient
+                containerClassName="rounded-full max-w-full"
+                className="flex items-center gap-2 px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-cyan-300 backdrop-blur-md"
+              >
+                <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse shrink-0" />
+                <Building2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span className="hidden sm:inline">Jaipur, Rajasthan Registered IT Consultancy & Engineering Firm</span>
+                <span className="sm:hidden">Jaipur, Rajasthan Registered IT Firm</span>
+                <span className="text-zinc-600 hidden sm:inline">|</span>
+                <span className="text-zinc-400 hidden sm:inline">Global Delivery Pods</span>
+              </HoverBorderGradient>
             </motion.div>
 
             {/* Minimalist Clean Typography Headline */}
@@ -46,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]"
             >
               Engineering Next-Gen{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-neutral-50 via-cyan-200 to-cyan-500">
@@ -60,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-base sm:text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-light"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-light"
             >
               Build Swift is Jaipur’s premier global IT consultancy, transforming ideas into scalable 
               digital powerhouses. From our state-of-the-art Innovation Lab in Jaipur, Rajasthan, we architect 
@@ -72,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-zinc-400 pt-1"
+              className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-zinc-400 pt-1"
             >
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -88,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               </div>
             </motion.div>
 
-            {/* Action CTAs with Aceternity Moving Border */}
+            {/* Action CTAs with Aceternity Moving Border & Interactive Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,6 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               >
                 <MovingBorderButton
                   borderRadius="0.875rem"
+                  containerClassName="w-full sm:w-auto"
                   className="px-6 py-3.5 font-semibold text-white bg-zinc-950/90 hover:bg-zinc-900 border border-white/10 flex items-center gap-2 group transition"
                 >
                   <span>Explore Capabilities</span>
@@ -144,7 +152,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                     <span className="text-[11px]">v2026.1-prod</span>
                   </div>
                 </div>
-                <div className="pt-3 space-y-1.5 leading-relaxed">
+                <div className="pt-3 space-y-1.5 leading-relaxed overflow-x-auto">
                   <p className="text-zinc-400">
                     <span className="text-emerald-400">$</span> buildswift init --location="Jaipur, Rajasthan" --tier="Enterprise"
                   </p>
@@ -170,3 +178,5 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
     </div>
   );
 };
+
+export default Hero;

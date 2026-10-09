@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Globe2, TrendingDown, Users2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const StatsCounter: React.FC = () => {
   const stats = [
@@ -34,31 +35,37 @@ export const StatsCounter: React.FC = () => {
   ];
 
   return (
-    <div className="relative py-12 bg-slate-900/60 border-y border-slate-800">
+    <div className="relative py-12 bg-zinc-950 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="p-5 rounded-2xl bg-slate-950/40 border border-slate-800/80 hover:border-slate-700 transition flex flex-col justify-between"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="p-5 sm:p-6 rounded-2xl bg-zinc-900/40 border border-white/10 hover:border-cyan-500/30 transition-all flex flex-col justify-between group"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs uppercase font-mono tracking-wider text-slate-400">
+                  <span className="text-[11px] uppercase font-mono tracking-wider text-zinc-400">
                     {stat.label}
                   </span>
-                  <Icon className={`w-5 h-5 ${stat.color}`} />
+                  <div className="p-2 rounded-xl bg-zinc-900/80 border border-white/5 group-hover:border-cyan-500/20 transition">
+                    <Icon className={`w-4 h-4 ${stat.color}`} />
+                  </div>
                 </div>
                 <div>
                   <div className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${stat.color} font-mono mb-1`}>
                     {stat.value}
                   </div>
-                  <div className="text-xs text-slate-400 leading-relaxed">
+                  <div className="text-xs text-zinc-400 leading-relaxed font-light">
                     {stat.description}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
@@ -66,3 +73,5 @@ export const StatsCounter: React.FC = () => {
     </div>
   );
 };
+
+export default StatsCounter;

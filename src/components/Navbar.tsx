@@ -30,26 +30,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   return (
     <>
       {/* Top Banner announcing Jaipur, Rajasthan Registration */}
-      <div className="bg-zinc-950 border-b border-white/5 text-xs py-2 px-4 text-center text-zinc-400 flex items-center justify-center gap-3">
+      <div className="bg-zinc-950 border-b border-white/5 text-xs py-2 px-4 text-center text-zinc-400 flex items-center justify-center gap-2 sm:gap-3">
         <span className="inline-flex items-center gap-1.5 text-cyan-400 font-medium">
-          <MapPin className="w-3.5 h-3.5 text-amber-400" />
+          <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
           Headquartered in Jaipur, Rajasthan, India
         </span>
         <span className="hidden md:inline text-zinc-600">•</span>
-        <span className="hidden md:inline text-zinc-400">
+        <span className="hidden md:inline text-zinc-400 font-mono text-[11px]">
           CIN: U72900RJ2024PTC089124 • World Trade Park Campus
         </span>
         <span className="hidden md:inline text-zinc-600">•</span>
-        <span className="inline-flex items-center gap-1 text-emerald-400">
-          <ShieldCheck className="w-3.5 h-3.5" /> ISO 27001 & SOC 2 Aligned
+        <span className="hidden sm:inline-flex items-center gap-1 text-emerald-400 font-medium">
+          <ShieldCheck className="w-3.5 h-3.5 shrink-0" /> ISO 27001 & SOC 2 Aligned
         </span>
       </div>
 
       <nav
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`relative z-40 transition-all duration-300 ${
           isScrolled
             ? 'bg-zinc-950/85 backdrop-blur-xl border-b border-white/10 py-3 shadow-2xl'
-            : 'bg-transparent py-4'
+            : 'bg-zinc-950/40 backdrop-blur-md border-b border-white/5 py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -150,3 +150,5 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     </>
   );
 };
+
+export default Navbar;
