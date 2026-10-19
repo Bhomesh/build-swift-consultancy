@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" fill="none">
+  <defs>
+    <linearGradient id="c2HexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="c2CoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c2Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#050811"/>
+
+  <g transform="translate(14, 13)">
+    <!-- Isometric Hexagon Badge -->
+    <path d="M32 4L58 19V49L32 64L6 49V19L32 4Z" fill="#0B132B" stroke="url(#c2HexGrad)" stroke-width="1.8"/>
+    
+    <!-- Code Bracket < (forming left N) -->
+    <path d="M22 23L13 34L22 45" stroke="#34D399" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Center G Core -->
+    <path d="M37 28C35 25 31 25 28 27C25 30 25 38 28 41C31 43 35 42 36 39V34H31" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Forward Bracket > (forming D / Forward Momentum) -->
+    <path d="M42 23L51 34L42 45" stroke="#60A5FA" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="32" cy="34" r="2.5" fill="#34D399"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c2Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#6EE7B7" letter-spacing="3.2">
+    CLOUD ARCHITECTURE &amp; APPLIED AI
+  </text>
+</svg>

@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" fill="none">
+  <defs>
+    <!-- Option 1 Gradients -->
+    <linearGradient id="c1N" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/><stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c1G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c1D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="c1B" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/><stop offset="50%" stop-color="#A855F7"/><stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c1T" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/><stop offset="50%" stop-color="#C084FC"/><stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+
+    <!-- Option 2 Gradients -->
+    <linearGradient id="c2H" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="50%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="c2T" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Option 3 Gradients -->
+    <linearGradient id="c3F" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A"/><stop offset="50%" stop-color="#7928CA"/><stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="c3C1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/><stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c3C2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/><stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c3T" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F43F5E"/><stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Option 4 Gradients -->
+    <linearGradient id="c4A" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/><stop offset="50%" stop-color="#818CF8"/><stop offset="100%" stop-color="#E879F9"/>
+    </linearGradient>
+    <linearGradient id="c4T" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/><stop offset="60%" stop-color="#A855F7"/><stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <!-- Option 5 Gradients -->
+    <linearGradient id="c5M" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="50%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c5L" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/><stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+
+    <pattern id="presGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="760" fill="#03050d"/>
+  <rect width="640" height="760" fill="url(#presGrid)"/>
+
+  <text x="320" y="46" font-family="'Manrope', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">
+    NEXT GEN DEV — LOGO DESIGN SUITE
+  </text>
+  <text x="320" y="70" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="middle" letter-spacing="2.4">
+    BRAND CONCEPTS FOR NEXGDEV.COM
+  </text>
+
+  
+<g transform="translate(40, 110)">
+  <!-- Card background -->
+  <rect width="560" height="110" rx="16" fill="#0c0b20" stroke="#1e1b4b" stroke-width="1.5"/>
+  <!-- Inner logo container -->
+  <g transform="translate(16, 15)">
+    <rect width="76" height="76" rx="18" fill="#161338" stroke="url(#c1B)" stroke-width="1.8"/>
+    <path d="M17 52V24L29 45V24" stroke="url(#c1N)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M44 30C41.5 25 38 24 35 26C31.5 29 31.5 47 35 50C39 52 43 51 45 47V39H38" stroke="url(#c1G)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M49 24H54C59.5 24 61 31 61 38C61 45 59.5 52 54 52H49V24Z" stroke="url(#c1D)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="29" cy="24" r="2.2" fill="#00F2FE"/>
+    <path d="M24 61H52" stroke="url(#c1B)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+  </g>
+  <!-- Wordmark & Details -->
+  <text x="110" y="48" font-family="'Manrope', sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c1T)">DEV</tspan>
+  </text>
+  <text x="112" y="69" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#A78BFA" letter-spacing="3.2">
+    NEXT GENERATION TECHNOLOGIES
+  </text>
+  <text x="112" y="92" font-family="'Manrope', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+    • Initials: N•G•D (Tri-Color Cyber Ribbon) | Modern, approachable &amp; highly legible
+  </text>
+</g>
+
+  
+<g transform="translate(40, 240)">
+  <rect width="560" height="110" rx="16" fill="#060c18" stroke="#064e3b" stroke-width="1.5"/>
+  <g transform="translate(16, 15)">
+    <path d="M38 4L70 22V58L38 76L6 58V22L38 4Z" fill="#0b1d28" stroke="url(#c2H)" stroke-width="2"/>
+    <path d="M26 27L16 40L26 53" stroke="#34D399" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M44 33C41.5 29.5 37 29.5 33.5 32C30 35.5 30 45 33.5 48.5C37 51 41.5 50 43 46V41H37" stroke="#38BDF8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M50 27L60 40L50 53" stroke="#60A5FA" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="38" cy="40" r="3" fill="#34D399"/>
+  </g>
+  <text x="110" y="48" font-family="'Manrope', sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c2T)">DEV</tspan>
+  </text>
+  <text x="112" y="69" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#6EE7B7" letter-spacing="3.2">
+    CLOUD ARCHITECTURE &amp; APPLIED AI
+  </text>
+  <text x="112" y="92" font-family="'Manrope', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+    • Initials: &lt; NGD &gt; (Quantum Hexagon Code Prism) | Deep engineering &amp; infrastructure focus
+  </text>
+</g>
+
+  
+<g transform="translate(40, 370)">
+  <rect width="560" height="110" rx="16" fill="#12071a" stroke="#581c87" stroke-width="1.5"/>
+  <g transform="translate(16, 15)">
+    <rect width="76" height="76" rx="18" fill="#1f0a2e" stroke="url(#c3F)" stroke-width="1.8"/>
+    <!-- Slanted Blade N & Forward Fast-Forward Chevrons >> -->
+    <path d="M18 57L28 19H35L25 57H18Z" fill="url(#c3C1)"/>
+    <path d="M26 19L48 44H40L21 24L26 19Z" fill="#FFFFFF" fill-opacity="0.95"/>
+    <path d="M40 57L50 19H57L47 57H40Z" fill="url(#c3C2)"/>
+    <circle cx="59" cy="20" r="3" fill="#FF4D4D"/>
+  </g>
+  <text x="110" y="48" font-family="'Manrope', sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c3T)">DEV</tspan>
+  </text>
+  <text x="112" y="69" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#F472B6" letter-spacing="3.2">
+    HIGH-VELOCITY SOFTWARE &amp; DEVOPS
+  </text>
+  <text x="112" y="92" font-family="'Manrope', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+    • Initials: NXG / &gt;&gt; (Velocity Aerodynamic Blades) | High-speed, cutting-edge startup aesthetic
+  </text>
+</g>
+
+  
+<g transform="translate(40, 500)">
+  <rect width="560" height="110" rx="16" fill="#080922" stroke="#1e1b4b" stroke-width="1.5"/>
+  <g transform="translate(16, 15)">
+    <rect width="76" height="76" rx="18" fill="#111438" stroke="url(#c4A)" stroke-width="1.8"/>
+    <!-- Infinite Möbius Ribbon Loop -->
+    <path d="M20 45C20 30 28 20 38 20C48 20 56 30 56 45C56 53 50 58 42 58C32 58 24 50 38 38C52 26 56 37 56 43" stroke="url(#c4A)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38 38H52" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round"/>
+    <circle cx="20" cy="45" r="3" fill="#38BDF8"/>
+    <circle cx="52" cy="38" r="3" fill="#E879F9"/>
+  </g>
+  <text x="110" y="48" font-family="'Manrope', sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c4T)">DEV</tspan>
+  </text>
+  <text x="112" y="69" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#818CF8" letter-spacing="3.2">
+    CONTINUOUS DELIVERY &amp; RESILIENT ARCHITECTURES
+  </text>
+  <text x="112" y="92" font-family="'Manrope', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+    • Initials: N•G (Infinite Continuous Delivery Loop) | Resilient, 99.999% SLA &amp; zero downtime
+  </text>
+</g>
+
+  
+<g transform="translate(40, 630)">
+  <rect width="560" height="110" rx="16" fill="#050811" stroke="#1e293b" stroke-width="1.5"/>
+  <g transform="translate(16, 15)">
+    <rect width="76" height="76" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.8"/>
+    <!-- Stencil Architectural Monogram -->
+    <path d="M19 57V19H26V43L40 19H47V57H40V33L26 57H19Z" fill="url(#c5M)"/>
+    <path d="M50 33L57 40L50 47" stroke="url(#c5L)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="57" cy="22" r="2.4" fill="#00F0FF"/>
+  </g>
+  <text x="110" y="48" font-family="'Manrope', sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c5L)">DEV</tspan>
+  </text>
+  <text x="112" y="69" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#94A3B8" letter-spacing="3.5">
+    GLOBAL ENTERPRISE IT CONSULTANCY
+  </text>
+  <text x="112" y="92" font-family="'Manrope', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">
+    • Initials: N•X•G (Enterprise Titanium Monolith) | Robust, institutional &amp; enterprise-grade
+  </text>
+</g>
+
+</svg>

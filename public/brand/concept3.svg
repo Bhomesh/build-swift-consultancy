@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" fill="none">
+  <defs>
+    <linearGradient id="c3Flame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A"/>
+      <stop offset="50%" stop-color="#7928CA"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c3Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#080512"/>
+
+  <g transform="translate(14, 13)">
+    <rect width="64" height="64" rx="16" fill="#120B24" stroke="url(#c3Flame)" stroke-width="1.8"/>
+    
+    <!-- Dynamic Forward Slanted N & Double Chevron >> -->
+    <!-- Blade 1: Slanted Pillar + Diagonal -->
+    <path d="M15 48L24 16H30L21 48H15Z" fill="url(#c3Chevron1)"/>
+    <!-- Blade 2: Intersecting Diagonal creating N & Forward Arrow -->
+    <path d="M22 16L40 37H33L18 20L22 16Z" fill="#FFFFFF" fill-opacity="0.95"/>
+    <!-- Blade 3: Rising Right Pillar / Forward Apex -->
+    <path d="M33 48L42 16H48L39 48H33Z" fill="url(#c3Chevron2)"/>
+    
+    <!-- Next-Gen Velocity Dot -->
+    <circle cx="49" cy="17" r="2.5" fill="#FF4D4D"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c3Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#F472B6" letter-spacing="3.2">
+    HIGH-VELOCITY SOFTWARE &amp; DEVOPS
+  </text>
+</svg>

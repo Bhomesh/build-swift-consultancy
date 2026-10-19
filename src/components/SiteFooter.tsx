@@ -4,6 +4,7 @@ import { SocialIcon } from './SiteIcons';
 import { Reveal } from './Reveal';
 
 interface SiteFooterProps {
+  activeLogo?: string;
   onOpenLegal: (slug: 'privacy' | 'terms' | 'cookies' | 'security') => void;
   onOpenCookies: () => void;
   onOpenContact: () => void;
@@ -11,6 +12,7 @@ interface SiteFooterProps {
 }
 
 export const SiteFooter: React.FC<SiteFooterProps> = ({
+  activeLogo,
   onOpenLegal,
   onOpenCookies,
   onOpenContact,
@@ -22,7 +24,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
         <Reveal variant="fade">
           <img
             className="site-footer__logo"
-            src={siteConfig.logo}
+            src={activeLogo || siteConfig.logo}
             alt={siteConfig.name}
           />
         </Reveal>

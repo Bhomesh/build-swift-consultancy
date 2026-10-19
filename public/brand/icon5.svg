@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="c5Metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c5Laser" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.8"/>
+  <path d="M16 48V16H22V36L34 16H40V48H34V28L22 48H16Z" fill="url(#c5Metal)"/>
+  <path d="M42 28L48 34L42 40" stroke="url(#c5Laser)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="18" r="2" fill="#00F0FF"/>
+</svg>

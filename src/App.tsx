@@ -18,6 +18,7 @@ import { SiteServiceModal } from './components/SiteServiceModal';
 import { SiteEstimatorModal } from './components/SiteEstimatorModal';
 import { SiteContactPage } from './components/SiteContactPage';
 import { ConsultationForm } from './components/ConsultationForm';
+import { BrandSuiteSection, logoConcepts } from './components/BrandSuiteSection';
 
 export type AppView = 'home' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'security';
 
@@ -49,6 +50,31 @@ export const App: React.FC = () => {
   const [activeLegalSlug, setActiveLegalSlug] = useState<LegalSlug>('privacy');
 
   const [consentOpen, setConsentOpen] = useState<boolean | undefined>(undefined);
+
+  // Active Brand Logo Selection
+  const [activeLogoId, setActiveLogoId] = useState<string>(() => {
+    try {
+      return typeof window !== 'undefined'
+        ? localStorage.getItem('ngd_active_logo') || 'cyber-triad'
+        : 'cyber-triad';
+    } catch {
+      return 'cyber-triad';
+    }
+  });
+
+  const activeLogoSvg =
+    logoConcepts.find((c) => c.id === activeLogoId)?.svgUrl || '/logo.svg';
+
+  const handleSelectActiveLogo = (logoId: string) => {
+    setActiveLogoId(logoId);
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('ngd_active_logo', logoId);
+      }
+    } catch {
+      // Ignore storage errors
+    }
+  };
 
   // Sync browser back/forward buttons
   useEffect(() => {
@@ -186,6 +212,7 @@ export const App: React.FC = () => {
           {/* Floating Top Pill Nav with Fullscreen Menu */}
           <SiteNav
             floating={true}
+            activeLogo={activeLogoSvg}
             onOpenConsultation={() => handleOpenConsultation()}
             onOpenEstimator={handleOpenEstimator}
             onNavigateHome={handleNavigateHome}
@@ -219,6 +246,12 @@ export const App: React.FC = () => {
           {/* Signature Animated Curved Statement Ribbon */}
           <StatementCurve />
 
+          {/* Official Brand Identity & Logo Suite (5 Bespoke Concepts + Live Switcher) */}
+          <BrandSuiteSection
+            activeLogoId={activeLogoId}
+            onSelectActiveLogo={handleSelectActiveLogo}
+          />
+
           {/* Careers & Culture Section (Sunset orange with avatar graphic) */}
           <SiteCareers
             onLearnMore={() => handleOpenConsultation('Offshore Engineering Squads & Careers')}
@@ -231,6 +264,7 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <SiteFooter
+        activeLogo={activeLogoSvg}
         onOpenLegal={handleOpenLegal}
         onOpenCookies={handleOpenCookieSettings}
         onOpenContact={handleOpenContactPage}

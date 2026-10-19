@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="c2HexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4L58 19V49L32 64L6 49V19L32 4Z" fill="#0B132B" stroke="url(#c2HexGrad)" stroke-width="2"/>
+  <path d="M22 23L13 34L22 45" stroke="#34D399" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 28C35 25 31 25 28 27C25 30 25 38 28 41C31 43 35 42 36 39V34H31" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 23L51 34L42 45" stroke="#60A5FA" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="34" r="2.5" fill="#34D399"/>
+</svg>

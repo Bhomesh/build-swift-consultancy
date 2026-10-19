@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="c3Flame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A"/>
+      <stop offset="50%" stop-color="#7928CA"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#120B24" stroke="url(#c3Flame)" stroke-width="1.8"/>
+  <path d="M15 48L24 16H30L21 48H15Z" fill="url(#c3Chevron1)"/>
+  <path d="M22 16L40 37H33L18 20L22 16Z" fill="#FFFFFF" fill-opacity="0.95"/>
+  <path d="M33 48L42 16H48L39 48H33Z" fill="url(#c3Chevron2)"/>
+  <circle cx="49" cy="17" r="2.5" fill="#FF4D4D"/>
+</svg>

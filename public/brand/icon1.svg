@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="c1N" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c1G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c1D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="c1Border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18153C"/>
+      <stop offset="100%" stop-color="#0B0920"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#c1Bg)" stroke="url(#c1Border)" stroke-width="1.8"/>
+  <path d="M14 44V20L24 38V20" stroke="url(#c1N)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 25C35 21 32 20 29.5 22C26.8 24.5 26.8 39.5 29.5 42C33 44 36 43 37.5 40V33H32" stroke="url(#c1G)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M41 20H45C49.5 20 50.5 26 50.5 32C50.5 38 49.5 44 45 44H41V20Z" stroke="url(#c1D)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="20" r="1.8" fill="#00F2FE"/>
+  <path d="M20 51H44" stroke="url(#c1Border)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+</svg>

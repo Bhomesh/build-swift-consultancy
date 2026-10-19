@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 740" fill="none">
+  <rect width="960" height="740" fill="#03050c"/>
+  
+  <!-- Grid overlay -->
+  <defs>
+    <pattern id="bgGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="740" fill="url(#bgGrid)"/>
+
+  <!-- Header -->
+  <text x="480" y="54" font-family="'Manrope', sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">
+    NEXT GEN DEV — BRAND IDENTITY &amp; LOGO CONCEPTS
+  </text>
+  <text x="480" y="78" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle" letter-spacing="2.5">
+    DOMAIN: NEXGDEV.COM • FIVE PRODUCTION-READY ARCHITECTURAL DESIGNS
+  </text>
+
+  <!-- Concept 1 -->
+  <g transform="translate(50, 110)">
+    <text x="0" y="-12" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#38BDF8">OPTION 1: THE CYBER MONOGRAM (N-G-D TRI-COLOR GLYPH)</text>
+    
+  <defs>
+    <linearGradient id="c1N" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c1G" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c1D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="c1Border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18153C"/>
+      <stop offset="100%" stop-color="#0B0920"/>
+    </linearGradient>
+    <linearGradient id="c1Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#070714"/>
+
+  <g transform="translate(14, 13)">
+    <rect width="64" height="64" rx="16" fill="url(#c1Bg)" stroke="url(#c1Border)" stroke-width="1.8"/>
+    <!-- NGD Monogram -->
+    <path d="M14 44V20L24 38V20" stroke="url(#c1N)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M37 25C35 21 32 20 29.5 22C26.8 24.5 26.8 39.5 29.5 42C33 44 36 43 37.5 40V33H32" stroke="url(#c1G)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M41 20H45C49.5 20 50.5 26 50.5 32C50.5 38 49.5 44 45 44H41V20Z" stroke="url(#c1D)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="24" cy="20" r="1.8" fill="#00F2FE"/>
+    <path d="M20 51H44" stroke="url(#c1Border)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c1Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#A78BFA" letter-spacing="3.2">
+    NEXT GENERATION TECHNOLOGIES
+  </text>
+
+  </g>
+
+  <!-- Concept 2 -->
+  <g transform="translate(50, 235)">
+    <text x="0" y="-12" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#10B981">OPTION 2: THE QUANTUM CODE PRISM (&lt; NGD &gt; HEXAGON)</text>
+    
+  <defs>
+    <linearGradient id="c2HexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="c2CoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c2Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#050811"/>
+
+  <g transform="translate(14, 13)">
+    <!-- Isometric Hexagon Badge -->
+    <path d="M32 4L58 19V49L32 64L6 49V19L32 4Z" fill="#0B132B" stroke="url(#c2HexGrad)" stroke-width="1.8"/>
+    
+    <!-- Code Bracket < (forming left N) -->
+    <path d="M22 23L13 34L22 45" stroke="#34D399" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Center G Core -->
+    <path d="M37 28C35 25 31 25 28 27C25 30 25 38 28 41C31 43 35 42 36 39V34H31" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Forward Bracket > (forming D / Forward Momentum) -->
+    <path d="M42 23L51 34L42 45" stroke="#60A5FA" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="32" cy="34" r="2.5" fill="#34D399"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c2Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#6EE7B7" letter-spacing="3.2">
+    CLOUD ARCHITECTURE &amp; APPLIED AI
+  </text>
+
+  </g>
+
+  <!-- Concept 3 -->
+  <g transform="translate(50, 360)">
+    <text x="0" y="-12" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#F43F5E">OPTION 3: THE VELOCITY CHEVRON (FAST-FORWARD &gt;&gt; &amp; DYNAMIC N)</text>
+    
+  <defs>
+    <linearGradient id="c3Flame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A"/>
+      <stop offset="50%" stop-color="#7928CA"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="c3Chevron2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="c3Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#080512"/>
+
+  <g transform="translate(14, 13)">
+    <rect width="64" height="64" rx="16" fill="#120B24" stroke="url(#c3Flame)" stroke-width="1.8"/>
+    
+    <!-- Dynamic Forward Slanted N & Double Chevron >> -->
+    <!-- Blade 1: Slanted Pillar + Diagonal -->
+    <path d="M15 48L24 16H30L21 48H15Z" fill="url(#c3Chevron1)"/>
+    <!-- Blade 2: Intersecting Diagonal creating N & Forward Arrow -->
+    <path d="M22 16L40 37H33L18 20L22 16Z" fill="#FFFFFF" fill-opacity="0.95"/>
+    <!-- Blade 3: Rising Right Pillar / Forward Apex -->
+    <path d="M33 48L42 16H48L39 48H33Z" fill="url(#c3Chevron2)"/>
+    
+    <!-- Next-Gen Velocity Dot -->
+    <circle cx="49" cy="17" r="2.5" fill="#FF4D4D"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c3Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#F472B6" letter-spacing="3.2">
+    HIGH-VELOCITY SOFTWARE &amp; DEVOPS
+  </text>
+
+  </g>
+
+  <!-- Concept 4 -->
+  <g transform="translate(50, 485)">
+    <text x="0" y="-12" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#818CF8">OPTION 4: THE INFINITE FLOW (MÖBIUS CONTINUOUS ARCHITECTURE)</text>
+    
+  <defs>
+    <linearGradient id="c4Aurora" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#E879F9"/>
+    </linearGradient>
+    <linearGradient id="c4Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#070719"/>
+
+  <g transform="translate(14, 13)">
+    <rect width="64" height="64" rx="16" fill="#0F112E" stroke="url(#c4Aurora)" stroke-width="1.8"/>
+    
+    <!-- Continuous Möbius Infinity Loop shaping N and G -->
+    <path d="M17 38C17 25 24 17 32 17C40 17 47 25 47 38C47 45 42 49 35 49C27 49 20 42 32 32C44 22 47 31 47 36" stroke="url(#c4Aurora)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Inward Terminal Shelf forming G & D prompt -->
+    <path d="M32 32H44" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
+    
+    <circle cx="17" cy="38" r="2.8" fill="#38BDF8"/>
+    <circle cx="44" cy="32" r="2.8" fill="#E879F9"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c4Text)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9.5" font-weight="700" fill="#818CF8" letter-spacing="3.2">
+    CONTINUOUS DELIVERY &amp; SCALABLE SYSTEMS
+  </text>
+
+  </g>
+
+  <!-- Concept 5 -->
+  <g transform="translate(50, 610)">
+    <text x="0" y="-12" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#00F0FF">OPTION 5: THE ARCHITECT MONOLITH (ENTERPRISE TITANIUM STENCIL)</text>
+    
+  <defs>
+    <linearGradient id="c5Metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="c5Laser" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="440" height="90" rx="14" fill="#030712"/>
+
+  <g transform="translate(14, 13)">
+    <!-- Precision Titanium Frame with Corner Notches -->
+    <rect width="64" height="64" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.8"/>
+    
+    <!-- Architectural Stencil Monogram (N - X - G) -->
+    <!-- Left Stencil Pillar (N) -->
+    <path d="M16 48V16H22V36L34 16H40V48H34V28L22 48H16Z" fill="url(#c5Metal)"/>
+    
+    <!-- Integrated Tech Chevron Overlay -->
+    <path d="M42 28L48 34L42 40" stroke="url(#c5Laser)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Micro Coordinates -->
+    <circle cx="48" cy="18" r="2" fill="#00F0FF"/>
+  </g>
+
+  <text x="96" y="47" font-family="'Manrope', sans-serif" font-size="27" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    NEXT GEN <tspan fill="url(#c5Laser)">DEV</tspan>
+  </text>
+  <text x="98" y="66" font-family="'Manrope', sans-serif" font-size="9" font-weight="700" fill="#94A3B8" letter-spacing="3.5">
+    GLOBAL ENTERPRISE IT CONSULTANCY
+  </text>
+
+  </g>
+</svg>

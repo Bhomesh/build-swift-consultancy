@@ -3,6 +3,7 @@ import { siteConfig } from '../data/siteData';
 
 interface SiteNavProps {
   floating?: boolean;
+  activeLogo?: string;
   onOpenConsultation?: (service?: string) => void;
   onOpenEstimator?: () => void;
   onNavigateHome?: () => void;
@@ -12,6 +13,7 @@ interface SiteNavProps {
 
 export const SiteNav: React.FC<SiteNavProps> = ({
   floating = true,
+  activeLogo,
   onOpenConsultation,
   onOpenEstimator,
   onNavigateHome,
@@ -78,6 +80,7 @@ export const SiteNav: React.FC<SiteNavProps> = ({
     { label: 'What We Do', href: '#what-we-do' },
     { label: 'Industries', href: '#industries' },
     { label: 'Cost Estimator', href: '#estimator' },
+    { label: 'Brand Identity', href: '#brand-suite' },
     { label: 'Careers', href: '#careers' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -98,7 +101,7 @@ export const SiteNav: React.FC<SiteNavProps> = ({
             className="site-nav__logo flex items-center gap-3 cursor-pointer"
             aria-label={`${siteConfig.name} Home`}
           >
-            <img src={siteConfig.logo} alt={siteConfig.name} />
+            <img src={activeLogo || siteConfig.logo} alt={siteConfig.name} />
           </a>
 
           <div className="flex items-center gap-4">
