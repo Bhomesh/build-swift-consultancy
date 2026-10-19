@@ -26,7 +26,7 @@ export const TestimonialsSection: React.FC = () => {
             Trusted by CTOs & Technical Founders
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base font-light">
-            See how engineering leaders across North America, Europe, Singapore, and India rely on Build Swift 
+            See how engineering leaders across North America, Europe, Singapore, and India rely on Next Gen Dev 
             for mission-critical systems and velocity.
           </p>
         </div>

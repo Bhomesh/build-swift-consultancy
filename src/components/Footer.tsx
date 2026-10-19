@@ -20,12 +20,12 @@ export const Footer: React.FC = () => {
                 <Zap className="w-4 h-4 text-cyan-400" />
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight">
-                Build<span className="text-cyan-400">Swift</span>
+                Next Gen <span className="text-cyan-400">Dev</span>
               </span>
             </div>
 
             <p className="text-zinc-400 leading-relaxed text-xs sm:text-sm font-light">
-              Build Swift is an enterprise IT consultancy and software engineering powerhouse registered in Jaipur, Rajasthan. 
+              Next Gen Dev (Next Generation Dev) is an enterprise IT consultancy and software engineering powerhouse registered in Jaipur, Rajasthan. 
               We design and ship high-throughput distributed systems, autonomous AI agents, and resilient cloud architectures.
             </p>
 
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-zinc-400 text-xs">
-            <span>© {new Date().getFullYear()} BuildSwift Technologies Private Limited. All Rights Reserved.</span>
+            <span>© {new Date().getFullYear()} Next Gen Dev Technologies Private Limited. All Rights Reserved.</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 text-xs">

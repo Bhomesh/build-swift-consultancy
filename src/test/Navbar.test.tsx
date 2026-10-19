@@ -17,9 +17,9 @@ describe('Navbar Component', () => {
     const handleConsultation = vi.fn();
     render(<Navbar onOpenConsultation={handleConsultation} />);
 
-    expect(screen.getByText(/Build/i)).toBeInTheDocument();
-    expect(screen.getByText(/Swift/i)).toBeInTheDocument();
-    expect(screen.getByText(/IT Consultancy • Jaipur/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Next Gen/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Dev/i).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Next Generation Dev • Jaipur/i)).toBeInTheDocument();
 
     const links = ['Services', 'Technologies', 'Cost Estimator', 'Case Studies', 'Jaipur Campus', 'Testimonials', 'FAQs'];
     links.forEach((link) => {

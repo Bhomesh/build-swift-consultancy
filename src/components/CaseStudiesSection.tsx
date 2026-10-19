@@ -124,7 +124,7 @@ export const CaseStudiesSection: React.FC = () => {
                 <div className="p-4 sm:p-5 rounded-xl bg-zinc-900/40 border border-cyan-500/20 space-y-2">
                   <span className="text-xs font-bold font-mono text-emerald-400 flex items-center gap-1.5 uppercase">
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span>Build Swift Architectural Solution</span>
+                    <span>Next Gen Dev Architectural Solution</span>
                   </span>
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
                     {selectedCase.solution}

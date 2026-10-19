@@ -56,7 +56,7 @@ describe('ConsultationForm Component', () => {
     render(<ConsultationForm isOpenModal={true} onCloseModal={handleClose} />);
 
     expect(screen.getByText(/Book Free Architectural Consultation/i)).toBeInTheDocument();
-    expect(screen.getByText(/Build Swift • Jaipur Office/i)).toBeInTheDocument();
+    expect(screen.getByText(/Next Gen Dev • Jaipur Office/i)).toBeInTheDocument();
 
     const closeButtons = screen.getAllByRole('button');
     const xButton = closeButtons.find(b => b.querySelector('svg.lucide-x'));

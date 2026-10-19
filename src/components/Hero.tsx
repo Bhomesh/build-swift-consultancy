@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Build Swift is Jaipur’s premier global IT consultancy, transforming ideas into scalable 
+              Next Gen Dev (Next Generation Dev) is Jaipur’s premier global IT consultancy, transforming ideas into scalable 
               digital powerhouses. From our state-of-the-art Innovation Lab in Jaipur, Rajasthan, we architect 
               high-throughput microservices, sovereign AI agent systems, and automated multi-cloud infrastructures.
             </motion.p>
@@ -145,7 +145,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                     <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-500/70" />
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
-                    <span className="ml-2 text-zinc-400">buildswift-consulting-mesh ~ jaipur-node</span>
+                    <span className="ml-2 text-zinc-400">nexgdev-consulting-mesh ~ jaipur-node</span>
                   </div>
                   <div className="flex items-center gap-1.5 text-cyan-400">
                     <Terminal className="w-3.5 h-3.5" />
@@ -154,10 +154,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
                 </div>
                 <div className="pt-3 space-y-1.5 leading-relaxed overflow-x-auto">
                   <p className="text-zinc-400">
-                    <span className="text-emerald-400">$</span> buildswift init --location="Jaipur, Rajasthan" --tier="Enterprise"
+                    <span className="text-emerald-400">$</span> nexgdev init --location="Jaipur, Rajasthan" --tier="Enterprise"
                   </p>
                   <p className="text-cyan-300">
-                    ✔ Registered Entity: BuildSwift Technologies Pvt. Ltd. [CIN: U72900RJ2024PTC089124]
+                    ✔ Registered Entity: Next Gen Dev Technologies Pvt. Ltd. [CIN: U72900RJ2024PTC089124]
                   </p>
                   <p className="text-zinc-300">
                     ✔ Deploying dedicated engineering pod (Architect + DevOps + AI Engine + SRE)

@@ -1,6 +1,8 @@
 export const jaipurHubData = {
-  companyName: 'BuildSwift Technologies Private Limited',
-  brandName: 'Build Swift',
+  companyName: 'Next Gen Dev Technologies Private Limited',
+  brandName: 'Next Gen Dev',
+  fullName: 'Next Generation Dev',
+  domain: 'nexgdev.com',
   registrationCity: 'Jaipur',
   registrationState: 'Rajasthan',
   country: 'India',
@@ -22,9 +24,9 @@ export const jaipurHubData = {
   contact: {
     phoneIndia: '+91 (0141) 358-9920',
     phoneMobile: '+91 98290 12844',
-    emailGeneral: 'contact@buildswift.in',
-    emailConsulting: 'solutions@buildswift.in',
-    emailCareers: 'careers@buildswift.in',
+    emailGeneral: 'contact@nexgdev.com',
+    emailConsulting: 'solutions@nexgdev.com',
+    emailCareers: 'careers@nexgdev.com',
     workingHours: 'Mon - Fri: 9:00 AM - 8:00 PM IST (Global Delivery Pods 24/7)'
   },
   regionalHighlights: [

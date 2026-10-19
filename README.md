@@ -1,22 +1,24 @@
-# Build Swift — Premier Enterprise IT Consultancy & Cloud Engineering
+# Next Gen Dev — Premier Enterprise IT Consultancy & Cloud Engineering
 
-[![Vercel Deploy](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBhomesh%2Fbuild-swift-consultancy)
-[![Build & Test](https://img.shields.io/badge/tests-100%25%20passed-brightgreen.svg)](https://github.com/Bhomesh/build-swift-consultancy)
-[![Registration](https://img.shields.io/badge/Registered%20In-Jaipur%2C%20Rajasthan-amber.svg)](https://github.com/Bhomesh/build-swift-consultancy)
+[![Vercel Deploy](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBhomesh%2Fnexgdev)
+[![Build & Test](https://img.shields.io/badge/tests-100%25%20passed-brightgreen.svg)](https://github.com/Bhomesh/nexgdev)
+[![Registration](https://img.shields.io/badge/Registered%20In-Jaipur%2C%20Rajasthan-amber.svg)](https://github.com/Bhomesh/nexgdev)
 
-**Build Swift** (BuildSwift Technologies Private Limited) is a premier enterprise IT consultancy and software engineering powerhouse registered in **Jaipur, Rajasthan, India**. We architect high-throughput distributed systems, production AI agent swarms, Kubernetes cloud migrations, and zero-trust cybersecurity for ambitious global enterprises.
+**Next Gen Dev** (Next Generation Dev / Next Gen Dev Technologies Private Limited) is a premier enterprise IT consultancy and software engineering powerhouse registered in **Jaipur, Rajasthan, India** (Domain: `nexgdev.com`). We architect high-throughput distributed systems, production AI agent swarms, Kubernetes cloud migrations, and zero-trust cybersecurity for ambitious global enterprises.
 
 ---
 
 ## 🏛️ Corporate Identity & Legal Registration
-- **Registered Entity**: BuildSwift Technologies Private Limited
+- **Registered Entity**: Next Gen Dev Technologies Private Limited
+- **Brand / Full Form**: Next Gen Dev (Next Generation Dev)
+- **Domain**: `nexgdev.com`
 - **Corporate Identification Number (CIN)**: `U72900RJ2024PTC089124`
 - **GSTIN**: `08AABCB1234F1Z8` (Jaipur, Rajasthan)
 - **MSME Udyam Registration**: `UDYAM-RJ-14-0098412`
 - **DPIIT Startup India ID**: `DIPP114892`
 - **Engineering Headquarters**: Suite 804, 8th Floor, Tower B, World Trade Park (WTP), Jawahar Lal Nehru Marg, Malviya Nagar & Sitapura IT Park, Jaipur, Rajasthan 302017, India.
 - **Direct Hotline**: +91 (0141) 358-9920 | +91 98290 12844
-- **Official Inquiries**: `contact@buildswift.in` | `solutions@buildswift.in`
+- **Official Inquiries**: `contact@nexgdev.com` | `solutions@nexgdev.com`
 
 ---
 

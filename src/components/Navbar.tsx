@@ -56,17 +56,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/15 flex items-center justify-center shadow-lg group-hover:border-cyan-500/50 transition">
-              <span className="font-mono font-bold text-sm text-cyan-300 tracking-tighter">BS</span>
+              <span className="font-mono font-bold text-xs text-cyan-300 tracking-tight">NGD</span>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="text-lg font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">
-                  Build<span className="text-cyan-400">Swift</span>
+                  Next Gen <span className="text-cyan-400">Dev</span>
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" title="Systems Active" />
               </div>
               <span className="text-[9px] tracking-widest text-zinc-400 uppercase font-mono">
-                IT Consultancy • Jaipur
+                Next Generation Dev • Jaipur
               </span>
             </div>
           </a>

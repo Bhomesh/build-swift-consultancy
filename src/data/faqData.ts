@@ -3,13 +3,13 @@ import { FaqItem } from '../types';
 export const faqData: FaqItem[] = [
   {
     category: 'Engagement',
-    question: 'How quickly can a Build Swift engineering pod ramp up and start delivery?',
+    question: 'How quickly can a Next Gen Dev engineering pod ramp up and start delivery?',
     answer: 'We can deploy a dedicated engineering pod (Lead Architect, Senior Full-Stack Engineers, DevOps/QA) within 5 to 7 business days following requirement alignment. We conduct zero-lag technical onboarding sprints to deliver measurable working software in your very first bi-weekly sprint.'
   },
   {
     category: 'Location & Legal',
-    question: 'Where is Build Swift incorporated and how are enterprise contracts governed?',
-    answer: 'Build Swift is legally registered as BuildSwift Technologies Private Limited in Jaipur, Rajasthan, India (CIN: U72900RJ2024PTC089124, GSTIN: 08AABCB1234F1Z8). We execute standard international Master Service Agreements (MSAs) with IP assignment clauses governed by either Indian jurisdiction or International English/Delaware Common Law according to your enterprise preference.'
+    question: 'Where is Next Gen Dev incorporated and how are enterprise contracts governed?',
+    answer: 'Next Gen Dev is legally registered as Next Gen Dev Technologies Private Limited in Jaipur, Rajasthan, India (CIN: U72900RJ2024PTC089124, GSTIN: 08AABCB1234F1Z8). We execute standard international Master Service Agreements (MSAs) with IP assignment clauses governed by either Indian jurisdiction or International English/Delaware Common Law according to your enterprise preference.'
   },
   {
     category: 'Intellectual Property',

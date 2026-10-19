@@ -1,12 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <rect width="48" height="48" rx="12" fill="#0A0F1D" />
-  <path d="M12 28L24 10L36 28H26L31 38L17 28H12Z" fill="url(#paint0_linear)" />
-  <circle cx="34" cy="14" r="3" fill="#00F0FF" />
   <defs>
-    <linearGradient id="paint0_linear" x1="12" y1="10" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#00F0FF" />
-      <stop offset="0.5" stop-color="#2563EB" />
-      <stop offset="1" stop-color="#3B82F6" />
+    <linearGradient id="favN" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="favG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+    <linearGradient id="favD" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#FB7185" />
+    </linearGradient>
+    <linearGradient id="favBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#F43F5E" />
+    </linearGradient>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18153C" />
+      <stop offset="100%" stop-color="#0B0920" />
     </linearGradient>
   </defs>
+
+  <rect width="48" height="48" rx="12" fill="url(#favBg)" />
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="url(#favBorder)" stroke-width="1.5" />
+
+  <!-- NGD monogram scaled for 48px -->
+  <g transform="translate(1.5, 0.5)">
+    <!-- N (8 to 17) -->
+    <path d="M8 33V15L17 29V15" stroke="url(#favN)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- G (20 to 29) -->
+    <path d="M29 19C27.5 16 24.5 15.5 22.5 17C20 19 20 29.5 22.5 31.5C25 33 28 32 29 30V25H25" stroke="url(#favG)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- D (32 to 40) -->
+    <path d="M32 15H35C39 15 40 20 40 24C40 28 39 33 35 33H32V15Z" stroke="url(#favD)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Accent Dot -->
+    <circle cx="17" cy="15" r="1.4" fill="#00F2FE" />
+    <!-- Code dash -->
+    <path d="M13 39H35" stroke="url(#favBorder)" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2.5 2.5" />
+  </g>
 </svg>

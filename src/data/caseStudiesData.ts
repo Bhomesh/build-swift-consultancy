@@ -6,7 +6,7 @@ export const caseStudiesData: CaseStudy[] = [
     client: 'FinTech PayStream',
     industry: 'Financial Technology & Payments',
     challenge: 'Legacy payment gateway suffered frequent 504 gateway timeouts during peak flash sales, with latency spiking beyond 1,800ms and infrastructure costs spiraling out of control.',
-    solution: 'Build Swift re-architected their transaction engine into event-driven Go microservices running on AWS EKS, paired with Redis caching and Apache Kafka for asynchronous ledger reconciliation.',
+    solution: 'Next Gen Dev re-architected their transaction engine into event-driven Go microservices running on AWS EKS, paired with Redis caching and Apache Kafka for asynchronous ledger reconciliation.',
     metrics: [
       { label: 'Daily Transactions', value: '10M tx/day' },
       { label: 'Switch Reliability SLA', value: '99.999%' },
@@ -38,7 +38,7 @@ export const caseStudiesData: CaseStudy[] = [
     client: 'Rajasthan Smart Logistics',
     industry: 'Supply Chain & Heavy Fleet Telematics',
     challenge: 'Freight operators faced heavy diesel fuel wastage and unpredictable vehicle breakdowns across 14,000+ commercial fleet routes across Rajasthan and Gujarat highway corridors.',
-    solution: 'Build Swift designed a real-time IoT telemetry ingestion pipeline with an AI dynamic routing optimizer that predicts traffic bottlenecks, diesel theft, and scheduled predictive maintenance.',
+    solution: 'Next Gen Dev designed a real-time IoT telemetry ingestion pipeline with an AI dynamic routing optimizer that predicts traffic bottlenecks, diesel theft, and scheduled predictive maintenance.',
     metrics: [
       { label: 'Fleet Fuel Cost Reduction', value: '28% Saved' },
       { label: 'Daily GPS Pings', value: '15M+' },

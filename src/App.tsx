@@ -1,108 +1,282 @@
-import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { StatsCounter } from './components/StatsCounter';
-import { ServicesSection } from './components/ServicesSection';
-import { ProjectCostEstimator } from './components/ProjectCostEstimator';
-import { TechStackMatrix } from './components/TechStackMatrix';
-import { CaseStudiesSection } from './components/CaseStudiesSection';
-import { JaipurHubShowcase } from './components/JaipurHubShowcase';
-import { TestimonialsSection } from './components/TestimonialsSection';
+import React, { useState, useEffect } from 'react';
+import { siteConfig, ServiceItem, WwdItem } from './data/siteData';
+import { SiteNav } from './components/SiteNav';
+import { SiteHero } from './components/SiteHero';
+import { SiteAbout } from './components/SiteAbout';
+import { SiteServices } from './components/SiteServices';
+import { SiteProblems } from './components/SiteProblems';
+import { SiteWhatWeDo } from './components/SiteWhatWeDo';
+import { SiteIndustries } from './components/SiteIndustries';
+import { StatementCurve } from './components/StatementCurve';
+import { SiteCareers } from './components/SiteCareers';
+import { SiteContactBanner } from './components/SiteContactBanner';
+import { SiteFooter } from './components/SiteFooter';
+import { SiteConsent } from './components/SiteConsent';
+import { SiteLegalModal, LegalSlug } from './components/SiteLegalModal';
+import { SiteLegalPage } from './components/SiteLegalPage';
+import { SiteServiceModal } from './components/SiteServiceModal';
+import { SiteEstimatorModal } from './components/SiteEstimatorModal';
+import { SiteContactPage } from './components/SiteContactPage';
 import { ConsultationForm } from './components/ConsultationForm';
-import { FAQSection } from './components/FAQSection';
-import { Footer } from './components/Footer';
-import { FloatingNav } from './components/ui/FloatingNav';
-import { ArrowUpRight, Layers, Cpu, Calculator, Award, MapPin } from 'lucide-react';
+
+export type AppView = 'home' | 'contact' | 'privacy' | 'terms' | 'cookies' | 'security';
+
+const getViewFromPath = (): AppView => {
+  if (typeof window === 'undefined') return 'home';
+  const path = window.location.pathname.replace(/^\/+/, '').toLowerCase();
+  const hash = window.location.hash.replace(/^#+/, '').toLowerCase();
+  if (path === 'contact' || hash === 'contact-page') return 'contact';
+  if (['privacy', 'terms', 'cookies', 'security'].includes(path)) return path as AppView;
+  if (['privacy', 'terms', 'cookies', 'security'].includes(hash)) return hash as AppView;
+  return 'home';
+};
 
 export const App: React.FC = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState('');
-  const [quoteDetails, setQuoteDetails] = useState('');
+  // Navigation / Page View State
+  const [activeView, setActiveView] = useState<AppView>(getViewFromPath);
 
-  const handleOpenConsultation = () => {
-    setSelectedService('');
-    setQuoteDetails('');
-    setModalOpen(true);
+  // Interactive Modals State
+  const [consultationOpen, setConsultationOpen] = useState<boolean>(false);
+  const [selectedServiceTitle, setSelectedServiceTitle] = useState<string>('');
+  const [quoteDetails, setQuoteDetails] = useState<string>('');
+
+  const [serviceModalOpen, setServiceModalOpen] = useState<boolean>(false);
+  const [activeService, setActiveService] = useState<ServiceItem | null>(null);
+
+  const [estimatorOpen, setEstimatorOpen] = useState<boolean>(false);
+
+  const [legalModalOpen, setLegalModalOpen] = useState<boolean>(false);
+  const [activeLegalSlug, setActiveLegalSlug] = useState<LegalSlug>('privacy');
+
+  const [consentOpen, setConsentOpen] = useState<boolean | undefined>(undefined);
+
+  // Sync browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      setActiveView(getViewFromPath());
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateToView = (view: AppView, targetHash?: string) => {
+    setActiveView(view);
+    const targetPath = view === 'home' ? (targetHash || '/') : `/${view}`;
+    try {
+      if (window.location.pathname !== (view === 'home' ? '/' : `/${view}`)) {
+        window.history.pushState(null, '', targetPath);
+      }
+    } catch (e) {
+      // In testing environments without history API support
+    }
+    if (!targetHash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
-  const handleSelectService = (serviceName: string) => {
-    setSelectedService(serviceName);
-    setModalOpen(true);
+  // Handlers
+  const handleOpenConsultation = (serviceName?: string) => {
+    if (serviceName) {
+      setSelectedServiceTitle(serviceName);
+    } else {
+      setSelectedServiceTitle('');
+    }
+    setConsultationOpen(true);
+  };
+
+  const handleSelectService = (service: ServiceItem) => {
+    setActiveService(service);
+    setServiceModalOpen(true);
+  };
+
+  const handleSeeAllServices = () => {
+    setActiveService(siteConfig.services[0]);
+    setServiceModalOpen(true);
+  };
+
+  const handleWwdRowClick = (item: WwdItem) => {
+    const matchedService = siteConfig.services.find((s) =>
+      s.title.toLowerCase().includes(item.title.toLowerCase().slice(0, 10))
+    );
+    if (matchedService) {
+      handleSelectService(matchedService);
+    } else {
+      handleOpenConsultation(item.title);
+    }
+  };
+
+  const handleOpenEstimator = () => {
+    setEstimatorOpen(true);
   };
 
   const handleQuoteRequested = (details: string) => {
     setQuoteDetails(details);
-    setModalOpen(true);
+    setSelectedServiceTitle('Custom Architecture Scope (Estimator Quote)');
+    setEstimatorOpen(false);
+    setConsultationOpen(true);
   };
 
-  const handleScheduleVisit = () => {
-    setSelectedService('On-Site WTP Jaipur Campus Visit & Architectural Workshop');
-    setModalOpen(true);
+  const handleOpenLegal = (slug: LegalSlug) => {
+    setActiveLegalSlug(slug);
+    setLegalModalOpen(true);
   };
 
-  const floatingNavItems = [
-    { name: 'Services', link: '#services', icon: <Layers className="w-3.5 h-3.5" /> },
-    { name: 'Stack', link: '#tech-stack', icon: <Cpu className="w-3.5 h-3.5" /> },
-    { name: 'Estimator', link: '#cost-estimator', icon: <Calculator className="w-3.5 h-3.5" /> },
-    { name: 'Proof', link: '#case-studies', icon: <Award className="w-3.5 h-3.5" /> },
-    { name: 'Jaipur Hub', link: '#jaipur-hub', icon: <MapPin className="w-3.5 h-3.5" /> },
-  ];
+  const handleOpenCookiesPolicy = () => {
+    setActiveLegalSlug('cookies');
+    setLegalModalOpen(true);
+  };
+
+  const handleOpenCookieSettings = () => {
+    setConsentOpen(true);
+  };
+
+  const handleOpenContactPage = () => {
+    navigateToView('contact');
+  };
+
+  const handleNavigateHome = () => {
+    navigateToView('home');
+  };
+
+  const handleNavigateSection = (href: string) => {
+    navigateToView('home', href);
+    setTimeout(() => {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 60);
+  };
+
+  const handleScrollToServices = () => {
+    handleNavigateSection('#services');
+  };
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200 antialiased relative">
-      {/* Aceternity Floating Nav on Scroll */}
-      <FloatingNav
-        navItems={floatingNavItems}
-        extraAction={
-          <button
-            onClick={handleOpenConsultation}
-            className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full bg-white hover:bg-zinc-200 text-black transition"
-          >
-            <span>Consult</span>
-            <ArrowUpRight className="w-3 h-3" />
-          </button>
-        }
+    <div className="site-page">
+      {/* Main View Router */}
+      {activeView === 'contact' ? (
+        <main className="flex-1">
+          <SiteContactPage
+            onBackToHome={handleNavigateHome}
+            initialService={selectedServiceTitle}
+            initialQuote={quoteDetails}
+            onOpenConsultation={() => handleOpenConsultation()}
+            onOpenEstimator={handleOpenEstimator}
+            onNavigateSection={handleNavigateSection}
+          />
+        </main>
+      ) : activeView === 'privacy' ||
+        activeView === 'terms' ||
+        activeView === 'cookies' ||
+        activeView === 'security' ? (
+        <main className="flex-1">
+          <SiteLegalPage
+            slug={activeView}
+            onSelectSlug={(slug) => navigateToView(slug)}
+            onNavigateHome={handleNavigateHome}
+            onOpenConsultation={() => handleOpenConsultation()}
+            onOpenEstimator={handleOpenEstimator}
+            onNavigateSection={handleNavigateSection}
+            onOpenContact={handleOpenContactPage}
+          />
+        </main>
+      ) : (
+        <main className="flex-1">
+          {/* Floating Top Pill Nav with Fullscreen Menu */}
+          <SiteNav
+            floating={true}
+            onOpenConsultation={() => handleOpenConsultation()}
+            onOpenEstimator={handleOpenEstimator}
+            onNavigateHome={handleNavigateHome}
+            onNavigateSection={handleNavigateSection}
+            onOpenContact={handleOpenContactPage}
+          />
+
+          {/* Hero Section */}
+          <SiteHero onDiscoverServices={handleScrollToServices} />
+
+          {/* About Us Section */}
+          <SiteAbout onReadMore={handleScrollToServices} />
+
+          {/* Services Section */}
+          <SiteServices
+            onSelectService={handleSelectService}
+            onSeeAllServices={handleSeeAllServices}
+          />
+
+          {/* Problems We Solve Section (3-lane infinite marquee) */}
+          <SiteProblems />
+
+          {/* What We Do Section (Emerald numbered items + stats + partner marquee) */}
+          <SiteWhatWeDo onRowClick={handleWwdRowClick} />
+
+          {/* Industries Section (Purple with constellation graphic) */}
+          <SiteIndustries
+            onTalkToExpert={() => handleOpenConsultation('Industry-Specific Architecture')}
+          />
+
+          {/* Signature Animated Curved Statement Ribbon */}
+          <StatementCurve />
+
+          {/* Careers & Culture Section (Sunset orange with avatar graphic) */}
+          <SiteCareers
+            onLearnMore={() => handleOpenConsultation('Offshore Engineering Squads & Careers')}
+          />
+
+          {/* Contact Banner with organic wave divider */}
+          <SiteContactBanner onContactClick={handleOpenContactPage} />
+        </main>
+      )}
+
+      {/* Footer */}
+      <SiteFooter
+        onOpenLegal={handleOpenLegal}
+        onOpenCookies={handleOpenCookieSettings}
+        onOpenContact={handleOpenContactPage}
+        onNavigateSection={handleNavigateSection}
       />
 
-      {/* Top Navigation Bar with Jaipur HQ Announcement */}
-      <Navbar onOpenConsultation={handleOpenConsultation} />
+      {/* Cookie Consent Banner */}
+      <SiteConsent
+        isOpen={consentOpen}
+        onOpenCookiesPolicy={handleOpenCookiesPolicy}
+        onClose={() => setConsentOpen(false)}
+      />
 
-      {/* Main Content Sections */}
-      <main className="flex-1">
-        <Hero onOpenConsultation={handleOpenConsultation} />
-
-        <StatsCounter />
-
-        <ServicesSection onSelectService={handleSelectService} />
-
-        <ProjectCostEstimator onQuoteRequested={handleQuoteRequested} />
-
-        <TechStackMatrix />
-
-        <CaseStudiesSection />
-
-        <JaipurHubShowcase onScheduleVisit={handleScheduleVisit} />
-
-        <TestimonialsSection />
-
-        <FAQSection />
-
-        {/* Embedded Full Consultation Section */}
-        <ConsultationForm />
-      </main>
-
-      {/* Global Footer */}
-      <Footer />
-
-      {/* Interactive Modal Dialog when triggered from CTAs / Estimator */}
-      {modalOpen && (
+      {/* Interactive Consultation Modal */}
+      {consultationOpen && (
         <ConsultationForm
           isOpenModal={true}
-          initialService={selectedService}
+          initialService={selectedServiceTitle}
           initialQuote={quoteDetails}
-          onCloseModal={() => setModalOpen(false)}
+          onCloseModal={() => setConsultationOpen(false)}
         />
       )}
+
+      {/* Interactive Service Detail Modal */}
+      <SiteServiceModal
+        isOpen={serviceModalOpen}
+        service={activeService}
+        onClose={() => setServiceModalOpen(false)}
+        onSelectService={(s) => setActiveService(s)}
+        onRequestConsultation={(title) => handleOpenConsultation(title)}
+        onOpenEstimator={handleOpenEstimator}
+      />
+
+      {/* Interactive Cost Estimator Modal */}
+      <SiteEstimatorModal
+        isOpen={estimatorOpen}
+        onClose={() => setEstimatorOpen(false)}
+        onQuoteRequested={handleQuoteRequested}
+      />
+
+      {/* Legal Documents Modal */}
+      <SiteLegalModal
+        isOpen={legalModalOpen}
+        initialSlug={activeLegalSlug}
+        onClose={() => setLegalModalOpen(false)}
+      />
     </div>
   );
 };
